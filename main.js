@@ -1,37 +1,24 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
-import { scene, camera, renderer } from "./components";
+import {
+  scene,
+  camera,
+  renderer,
+  torus,
+  pointLight,
+  ambientLight,
+} from "./components";
 // import { lightHelper, gridHelper } from "./utils"; // Use when needed
 import "./style.css";
 
 /* 3 main objects for setup: scene, camera, renderer */
-
-const spaceTexture = new THREE.TextureLoader().load("./img/space.jpg");
-scene.background = spaceTexture;
-
-renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(window.innerWidth, window.innerHeight);
-camera.position.setZ(30);
-
 renderer.render(scene, camera);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 
 /* Objects to display*/
-const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
-const material = new THREE.MeshPhongMaterial({
-  color: 0xa5d6a7,
-});
-const torus = new THREE.Mesh(geometry, material);
-
 scene.add(torus);
-
-// Lighting
-const pointLight = new THREE.PointLight(0xf6faf6);
-pointLight.position.set(5, 5, 5);
-
-const ambientLight = new THREE.AmbientLight(0xf6faf6);
 scene.add(pointLight, ambientLight);
 
 // Helpers
