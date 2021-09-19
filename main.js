@@ -1,25 +1,14 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
+import { scene, camera, renderer } from "./components";
+// import { lightHelper, gridHelper } from "./utils"; // Use when needed
 import "./style.css";
 
 /* 3 main objects for setup: scene, camera, renderer */
 
-// A container for everything
-const scene = new THREE.Scene();
 const spaceTexture = new THREE.TextureLoader().load("./img/space.jpg");
 scene.background = spaceTexture;
-
-const camera = new THREE.PerspectiveCamera(
-  75,
-  window.innerWidth / window.innerHeight,
-  0.1,
-  1000
-);
-
-const renderer = new THREE.WebGLRenderer({
-  canvas: document.querySelector("#bg"),
-});
 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -46,9 +35,7 @@ const ambientLight = new THREE.AmbientLight(0xf6faf6);
 scene.add(pointLight, ambientLight);
 
 // Helpers
-// const lightHelper = new THREE.PointLightHelper(pointLight);
-// const gridHelper = new THREE.GridHelper(200, 50);
-// scene.add(lightHelper, gridHelper);
+// scene.add(lightHelper(pointLight), gridHelper);
 
 const addStar = () => {
   const geometry = new THREE.SphereGeometry(0.25, 24, 24);
