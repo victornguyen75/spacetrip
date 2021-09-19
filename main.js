@@ -7,6 +7,8 @@ import "./style.css";
 
 // A container for everything
 const scene = new THREE.Scene();
+const spaceTexture = new THREE.TextureLoader().load("./img/space.jpg");
+scene.background = spaceTexture;
 
 const camera = new THREE.PerspectiveCamera(
   75,
@@ -44,9 +46,9 @@ const ambientLight = new THREE.AmbientLight(0xf6faf6);
 scene.add(pointLight, ambientLight);
 
 // Helpers
-const lightHelper = new THREE.PointLightHelper(pointLight);
-const gridHelper = new THREE.GridHelper(200, 50);
-scene.add(lightHelper, gridHelper);
+// const lightHelper = new THREE.PointLightHelper(pointLight);
+// const gridHelper = new THREE.GridHelper(200, 50);
+// scene.add(lightHelper, gridHelper);
 
 const addStar = () => {
   const geometry = new THREE.SphereGeometry(0.25, 24, 24);
