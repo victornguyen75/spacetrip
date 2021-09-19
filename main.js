@@ -51,14 +51,13 @@ const addStar = () => {
 Array(200).fill().forEach(addStar);
 
 const animate = () => {
+  const orbitRadius = 40;
+  const date = Date.now() * 0.001;
   requestAnimationFrame(animate);
 
   torus.rotation.x += 0.0005;
   torus.rotation.y += 0.0005;
   torus.rotation.z += 0.0005;
-
-  const orbitRadius = 40;
-  const date = Date.now() * 0.001;
 
   moon.rotation.x += 0.06;
   moon.rotation.y += 0.003;
@@ -75,6 +74,8 @@ const animate = () => {
     0,
     -4 + Math.sin(date) * orbitRadius
   );
+
+  gumby.position.y += 0.001;
 
   controls.update();
 

@@ -11,5 +11,5 @@ const gumby = new THREE.Mesh(
   })
 );
 
-gumby.position.set(0, 5, 0);
+gumby.position.set(0, 3, 0);
 export { gumby };
