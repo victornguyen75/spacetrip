@@ -57,8 +57,8 @@ const animate = () => {
   torus.rotation.y += 0.005;
   torus.rotation.z += 0.01;
 
-  const orbitRadius = 20;
-  let date = Date.now() * 0.001;
+  const orbitRadius = 40;
+  const date = Date.now() * 0.001;
 
   moon.rotation.x += 0.06;
   moon.rotation.y += 0.003;
