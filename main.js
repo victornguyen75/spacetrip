@@ -17,13 +17,18 @@ import "./style.css";
 /* 3 main objects for setup: scene, camera, renderer */
 renderer.render(scene, camera);
 
-const controls = new OrbitControls(camera, renderer.domElement);
-
 /* Objects to display*/
-scene.add(pointLight, ambientLight, torus, gumby, moon);
+scene.add(
+  pointLight,
+  ambientLight,
+  torus,
+  gumby,
+  moon
+  // lightHelper(pointLight), // Helpers
+  // gridHelper, // Helpers
+);
 
-// Helpers
-// scene.add(lightHelper(pointLight), gridHelper);
+const controls = new OrbitControls(camera, renderer.domElement);
 
 const addStar = () => {
   const geometry = new THREE.SphereGeometry(0.25, 24, 24);
