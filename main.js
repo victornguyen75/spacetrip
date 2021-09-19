@@ -10,6 +10,9 @@ import {
   ambientLight,
   gumby,
   moon,
+  header,
+  paragraph,
+  weeWoo,
 } from "./components";
 // import { lightHelper, gridHelper } from "./utils"; // Use when needed
 import "./style.css";
@@ -23,7 +26,10 @@ scene.add(
   ambientLight,
   torus,
   gumby,
-  moon
+  moon,
+  header,
+  paragraph,
+  weeWoo
   // lightHelper(pointLight), // Helpers
   // gridHelper, // Helpers
 );
@@ -50,6 +56,25 @@ const animate = () => {
   torus.rotation.x += 0.01;
   torus.rotation.y += 0.005;
   torus.rotation.z += 0.01;
+
+  const orbitRadius = 20;
+  let date = Date.now() * 0.001;
+
+  moon.rotation.x += 0.06;
+  moon.rotation.y += 0.003;
+  moon.rotation.z += 0.1;
+
+  moon.position.set(
+    Math.cos(date) * orbitRadius,
+    0,
+    Math.sin(date) * orbitRadius
+  );
+
+  weeWoo.position.set(
+    11 + Math.cos(date) * orbitRadius,
+    0,
+    -4 + Math.sin(date) * orbitRadius
+  );
 
   controls.update();
 

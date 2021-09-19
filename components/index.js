@@ -5,3 +5,4 @@ export * from "./torus";
 export * from "./lighting";
 export * from "./gumby";
 export * from "./moon";
+export * from "./welcome";
