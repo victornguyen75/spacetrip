@@ -64,6 +64,28 @@ const addStar = () => {
 
 Array(200).fill().forEach(addStar);
 
+const gumbyTexture = new THREE.TextureLoader().load("./img/gumby.jpg");
+
+const gumby = new THREE.Mesh(
+  new THREE.BoxGeometry(3, 3, 3),
+  new THREE.MeshBasicMaterial({ map: gumbyTexture })
+);
+
+scene.add(gumby);
+
+const moonTexture = new THREE.TextureLoader().load("./img/moon.jpg");
+const normalTexture = new THREE.TextureLoader().load("./img/normal.jpg");
+
+const moon = new THREE.Mesh(
+  new THREE.SphereGeometry(3, 32, 32),
+  new THREE.MeshStandardMaterial({
+    map: moonTexture,
+    normalMap: normalTexture,
+  })
+);
+
+scene.add(moon);
+
 const animate = () => {
   requestAnimationFrame(animate);
 
