@@ -53,9 +53,9 @@ Array(200).fill().forEach(addStar);
 const animate = () => {
   requestAnimationFrame(animate);
 
-  torus.rotation.x += 0.01;
-  torus.rotation.y += 0.005;
-  torus.rotation.z += 0.01;
+  torus.rotation.x += 0.0005;
+  torus.rotation.y += 0.0005;
+  torus.rotation.z += 0.0005;
 
   const orbitRadius = 40;
   const date = Date.now() * 0.001;
