@@ -16,7 +16,6 @@ canvas {
 }
 
 main {
-  width: 100vw;
   color: white;
   z-index: 99;
   position: absolute;
@@ -26,6 +25,10 @@ main {
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+}
+
+span.red {
+  color: red;
 }
 
 h1,
