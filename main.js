@@ -8,6 +8,8 @@ import {
   torus,
   pointLight,
   ambientLight,
+  gumby,
+  moon,
 } from "./components";
 // import { lightHelper, gridHelper } from "./utils"; // Use when needed
 import "./style.css";
@@ -18,8 +20,7 @@ renderer.render(scene, camera);
 const controls = new OrbitControls(camera, renderer.domElement);
 
 /* Objects to display*/
-scene.add(torus);
-scene.add(pointLight, ambientLight);
+scene.add(pointLight, ambientLight, torus, gumby, moon);
 
 // Helpers
 // scene.add(lightHelper(pointLight), gridHelper);
@@ -38,30 +39,17 @@ const addStar = () => {
 
 Array(200).fill().forEach(addStar);
 
-const gumbyTexture = new THREE.TextureLoader().load("./img/gumby.jpg");
+const animate = () => {
+  requestAnimationFrame(animate);
 
-const gumby = new THREE.Mesh(
-  new THREE.BoxGeometry(3, 3, 3),
-  new THREE.MeshBasicMaterial({ map: gumbyTexture })
-);
+  torus.rotation.x += 0.01;
+  torus.rotation.y += 0.005;
+  torus.rotation.z += 0.01;
 
-scene.add(gumby);
+  controls.update();
 
-const moonTexture = new THREE.TextureLoader().load("./img/moon.jpg");
-const normalTexture = new THREE.TextureLoader().load("./img/normal.jpg");
-
-const moon = new THREE.Mesh(
-  new THREE.SphereGeometry(3, 32, 32),
-  new THREE.MeshStandardMaterial({
-    map: moonTexture,
-    normalMap: normalTexture,
-  })
-);
-
-moon.position.z = 30;
-moon.position.setX(-10);
-
-scene.add(moon);
+  renderer.render(scene, camera);
+};
 
 const moveCamera = () => {
   const t = document.body.getBoundingClientRect().top;
@@ -77,18 +65,5 @@ const moveCamera = () => {
   camera.position.z = t * -0.01;
 };
 
-document.body.onscroll = moveCamera;
-
-const animate = () => {
-  requestAnimationFrame(animate);
-
-  torus.rotation.x += 0.01;
-  torus.rotation.y += 0.005;
-  torus.rotation.z += 0.01;
-
-  controls.update();
-
-  renderer.render(scene, camera);
-};
-
 animate();
+document.body.onscroll = moveCamera;
