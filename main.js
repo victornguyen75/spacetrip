@@ -96,7 +96,7 @@ const animate = () => {
     -4 + Math.sin(date) * orbitRadius
   );
 
-  gumby.position.y += 0.001;
+  gumby.position.y += 0.007;
 
   controls.update();
 
