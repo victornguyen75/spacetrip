@@ -11,3 +11,4 @@ export * from "./deepFriedDog";
 export * from "./deepFriedPenguin";
 export * from "./dog";
 export * from "./gorilla";
+export * from "./pancakeBaby";
