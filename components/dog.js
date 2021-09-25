@@ -8,6 +8,6 @@ const dog = new THREE.Mesh(
     map: dogTexture,
   })
 );
-dog.position.set(-15, -25, -19);
+dog.position.set(-45, -75, -19);
 dog.rotation.x = 20;
 export { dog };
