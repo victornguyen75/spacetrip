@@ -12,4 +12,5 @@ export * from "./deepFriedPenguin";
 export * from "./dog";
 export * from "./gorilla";
 export * from "./pancakeBaby";
+export * from "./penguin";
 export * from "./penguin2";

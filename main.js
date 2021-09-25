@@ -19,6 +19,7 @@ import {
   dog,
   gorilla,
   pancakeBaby,
+  penguin,
   penguin2,
 } from "./components";
 // import { lightHelper, gridHelper } from "./utils"; // Use when needed
@@ -43,6 +44,7 @@ scene.add(
   dog,
   gorilla,
   pancakeBaby,
+  penguin,
   penguin2
   // lightHelper(pointLight), // Helpers
   // gridHelper, // Helpers
@@ -99,6 +101,8 @@ const animate = () => {
   );
 
   gumby.position.y += 0.007;
+
+  penguin.position.set(-100 + Math.cos(date / 3) * orbitRadius * 10, 0, 0);
 
   controls.update();
 
