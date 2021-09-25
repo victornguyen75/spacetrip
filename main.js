@@ -13,6 +13,7 @@ import {
   header,
   paragraph,
   weeWoo,
+  bug,
 } from "./components";
 // import { lightHelper, gridHelper } from "./utils"; // Use when needed
 import "./style.css";
@@ -29,7 +30,8 @@ scene.add(
   moon,
   header,
   paragraph,
-  weeWoo
+  weeWoo,
+  bug
   // lightHelper(pointLight), // Helpers
   // gridHelper, // Helpers
 );
@@ -67,6 +69,15 @@ const animate = () => {
     Math.cos(date) * orbitRadius,
     0,
     Math.sin(date) * orbitRadius
+  );
+
+  bug.rotation.x += 0.005;
+  bug.rotation.z += 0.005;
+
+  bug.position.set(
+    10 - Math.cos(date) * orbitRadius,
+    5 + Math.sin(date) * orbitRadius,
+    15
   );
 
   weeWoo.position.set(

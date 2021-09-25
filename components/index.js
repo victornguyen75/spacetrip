@@ -6,3 +6,4 @@ export * from "./lighting";
 export * from "./gumby";
 export * from "./moon";
 export * from "./welcome";
+export * from "./bug";
