@@ -8,6 +8,6 @@ const penguin2 = new THREE.Mesh(
     map: penguin2Texture,
   })
 );
-penguin2.position.set(0, 0, 50);
+penguin2.position.set(0, 0, 100);
 
 export { penguin2 };
