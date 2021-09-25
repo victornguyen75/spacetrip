@@ -10,6 +10,6 @@ const pancakeBaby = new THREE.Mesh(
     map: pancakeBabyTexture,
   })
 );
-pancakeBaby.position.set(0, 0, -100);
+pancakeBaby.position.set(0, 30, -100);
 
 export { pancakeBaby };
