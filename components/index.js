@@ -8,3 +8,4 @@ export * from "./moon";
 export * from "./welcome";
 export * from "./bug";
 export * from "./deepFriedDog";
+export * from "./deepFriedPenguin";
