@@ -106,6 +106,10 @@ const animate = () => {
 
   penguin.rotation.x += 0.007;
 
+  gorilla.position.x -= 0.03;
+  gorilla.position.y -= 0.01;
+  gorilla.position.z -= 0.01;
+
   controls.update();
 
   renderer.render(scene, camera);
