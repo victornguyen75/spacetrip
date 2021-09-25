@@ -17,6 +17,7 @@ import {
   deepFriedDog,
   deepFriedPenguin,
   dog,
+  gorilla,
 } from "./components";
 // import { lightHelper, gridHelper } from "./utils"; // Use when needed
 import "./style.css";
@@ -37,7 +38,8 @@ scene.add(
   bug,
   deepFriedDog,
   deepFriedPenguin,
-  dog
+  dog,
+  gorilla
   // lightHelper(pointLight), // Helpers
   // gridHelper, // Helpers
 );
