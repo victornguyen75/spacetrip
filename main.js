@@ -104,7 +104,8 @@ const animate = () => {
 
   penguin.position.set(-100 + Math.cos(date / 3) * orbitRadius * 10, 0, 0);
 
-  penguin.rotation.x += 0.007;
+  penguin.rotation.x += 0.009;
+  penguin.rotation.y += 0.009;
 
   gorilla.position.x -= 0.03;
   gorilla.position.y -= 0.01;
