@@ -16,6 +16,7 @@ import {
   bug,
   deepFriedDog,
   deepFriedPenguin,
+  dog,
 } from "./components";
 // import { lightHelper, gridHelper } from "./utils"; // Use when needed
 import "./style.css";
@@ -35,7 +36,8 @@ scene.add(
   weeWoo,
   bug,
   deepFriedDog,
-  deepFriedPenguin
+  deepFriedPenguin,
+  dog
   // lightHelper(pointLight), // Helpers
   // gridHelper, // Helpers
 );
