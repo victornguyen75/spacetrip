@@ -5,7 +5,7 @@ const pancakeBabyTexture = new THREE.TextureLoader().load(
 );
 
 const pancakeBaby = new THREE.Mesh(
-  new THREE.BoxGeometry(200, 200, 1),
+  new THREE.BoxGeometry(400, 400, 1),
   new THREE.MeshStandardMaterial({
     map: pancakeBabyTexture,
   })
