@@ -4,7 +4,7 @@ const dogTexture = new THREE.TextureLoader().load("../img/dog.jpg");
 
 const dog = new THREE.Mesh(
   new THREE.CylinderGeometry(23, 5, 50),
-  new THREE.MeshStandardMaterial({
+  new THREE.MeshPhongMaterial({
     map: dogTexture,
   })
 );

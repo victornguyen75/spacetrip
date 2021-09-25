@@ -5,7 +5,7 @@ const normalTexture = new THREE.TextureLoader().load("../img/normal.jpg");
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
-  new THREE.MeshStandardMaterial({
+  new THREE.MeshPhongMaterial({
     map: moonTexture,
     normalMap: normalTexture,
   })

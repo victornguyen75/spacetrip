@@ -5,7 +5,7 @@ const normalTexture = new THREE.TextureLoader().load("../img/normal.jpg");
 
 const gumby = new THREE.Mesh(
   new THREE.BoxGeometry(7, 7, 7),
-  new THREE.MeshStandardMaterial({
+  new THREE.MeshPhongMaterial({
     map: gumbyTexture,
     normalMap: normalTexture,
   })

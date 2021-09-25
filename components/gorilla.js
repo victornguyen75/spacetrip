@@ -4,7 +4,7 @@ const gorillaTexture = new THREE.TextureLoader().load("../img/gorilla.jpg");
 
 const gorilla = new THREE.Mesh(
   new THREE.BoxGeometry(20, 50, 20),
-  new THREE.MeshStandardMaterial({
+  new THREE.MeshPhongMaterial({
     map: gorillaTexture,
   })
 );

@@ -6,7 +6,7 @@ const deepFriedDogTexture = new THREE.TextureLoader().load(
 
 const deepFriedDog = new THREE.Mesh(
   new THREE.SphereGeometry(10, 32, 32),
-  new THREE.MeshStandardMaterial({
+  new THREE.MeshPhongMaterial({
     map: deepFriedDogTexture,
   })
 );
