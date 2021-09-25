@@ -21,7 +21,7 @@ const paragraph = new TextSprite({
   fontSize: 1,
   fontWeight: 200,
   fontStyle: "normal",
-  padding: 0.5,
+  padding: 1.0,
   text: [
     "🚀 Welcome to the meme space!",
     "Move around by scrolling your mouse,",
