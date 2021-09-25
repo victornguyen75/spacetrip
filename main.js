@@ -104,6 +104,8 @@ const animate = () => {
 
   penguin.position.set(-100 + Math.cos(date / 3) * orbitRadius * 10, 0, 0);
 
+  penguin.rotation.x += 0.007;
+
   controls.update();
 
   renderer.render(scene, camera);
