@@ -5,11 +5,11 @@ const deepFriedDogTexture = new THREE.TextureLoader().load(
 );
 
 const deepFriedDog = new THREE.Mesh(
-  new THREE.SphereGeometry(10, 32, 32),
+  new THREE.SphereGeometry(50, 32, 32),
   new THREE.MeshPhongMaterial({
     map: deepFriedDogTexture,
   })
 );
-deepFriedDog.position.set(15, 30, 27);
+deepFriedDog.position.set(100, 30, -250);
 
 export { deepFriedDog };

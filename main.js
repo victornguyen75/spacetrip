@@ -111,6 +111,9 @@ const animate = () => {
   gorilla.position.y -= 0.01;
   gorilla.position.z -= 0.01;
 
+  deepFriedDog.rotation.x += 0.005;
+  deepFriedDog.rotation.y += 0.005;
+
   controls.update();
 
   renderer.render(scene, camera);
