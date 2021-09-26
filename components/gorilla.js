@@ -8,7 +8,7 @@ const gorilla = new THREE.Mesh(
     map: gorillaTexture,
   })
 );
-gorilla.position.set(120, 45, -30);
+gorilla.position.set(120, 45, -100);
 gorilla.rotation.x = 12;
 
 export { gorilla };
