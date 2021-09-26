@@ -1,6 +1,10 @@
 # Spacetrip
 
-My first ThreeJS (JavaScript + WebGL) project
+My first ThreeJS (JavaScript + WebGL) project.
+
+## Demo
+
+See the [demo](https://victornguyen75.github.io/spacetrip) on GitHub Pages.
 
 ## Usage
 
