@@ -4,7 +4,7 @@ My first ThreeJS (JavaScript + WebGL) project.
 
 ## Demo
 
-See the [demo](https://victornguyen75.github.io/spacetrip) on GitHub Pages.
+See the [demo](https://spacetrip.netlify.app/) on Netlify.
 
 ## Usage
 
